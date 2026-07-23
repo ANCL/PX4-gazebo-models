@@ -97,8 +97,8 @@
     </inertia>
   {% endmacro %}
 
-  {# --- FY690S HEXAROTOR TILT MODEL --- #}
-  <model name='fy690s_tilt'>
+  {# --- FY690S HEXAROTOR TILT MODEL WITH RUKOBI SENSOR --- #}
+  <model name='fy690s_tilt_rokubi'>
     <pose>0 0 0.4 0 0 0</pose>
     <self_collide>false</self_collide>
     <static>false</static>
@@ -126,7 +126,7 @@
         <material><ambient>0.5 0.5 0.5 1.0</ambient><diffuse>0.5 0.5 0.5 1.0</diffuse></material> 
       </visual>
 
-      <visual name="body_top_visual"> <pose>0 0 0.025 0 0 0</pose>  
+      <visual name="body_top_visual"> <pose>0 0 0.025 0 0 {{ pi/2 }}</pose>  
         <geometry> 
           <mesh><uri>model://fy690s/meshes/body_top.dae</uri></mesh> 
         </geometry> 
@@ -140,14 +140,12 @@
 
       {# --- SENSORS FOUND WITHIN THE BASE --- #}
       <sensor name="air_pressure_sensor" type="air_pressure">
-      <gz_frame_id>base_link</gz_frame_id>
       <always_on>1</always_on>
       <update_rate>50</update_rate>
       <air_pressure><pressure><noise type="gaussian"><mean>0</mean><stddev>3</stddev></noise></pressure></air_pressure>
       </sensor>
 
       <sensor name="magnetometer_sensor" type="magnetometer">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>100</update_rate>
         <magnetometer>
@@ -158,7 +156,6 @@
       </sensor>
 
       <sensor name="imu_sensor" type="imu">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>250</update_rate>
         <imu>
@@ -177,7 +174,6 @@
       </sensor>
 
       <sensor name="navsat_sensor" type="navsat">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>30</update_rate>
       </sensor>

@@ -129,7 +129,7 @@
         <material><ambient>0.5 0.5 0.5 1.0</ambient><diffuse>0.5 0.5 0.5 1.0</diffuse></material> 
       </visual> 
 
-      <visual name="body_top_visual"> <pose>0 0 0.025 0 0 0</pose>  
+      <visual name="body_top_visual"> <pose>0 0 0.025 0 0 1.570796326795</pose>  
         <geometry> 
           <mesh><uri>model://fy690s/meshes/body_top.dae</uri></mesh> 
         </geometry> 
@@ -828,7 +828,7 @@
       <linkName>rotor_0</linkName> 
       <turningDirection>ccw</turningDirection> 
       <timeConstantUp>0.0125</timeConstantUp> 
-      <timeConstantDown>0.025</timeConstantDown>  
+      <timeConstantDown>0.025</timeConstantDown> 
       <maxRotVelocity>822.05</maxRotVelocity> 
       <motorConstant>2.62e-05</motorConstant> 
       <momentConstant>0.018</momentConstant> 
@@ -844,7 +844,7 @@
       <linkName>rotor_1</linkName> 
       <turningDirection>ccw</turningDirection> 
       <timeConstantUp>0.0125</timeConstantUp> 
-      <timeConstantDown>0.025</timeConstantDown>  
+      <timeConstantDown>0.025</timeConstantDown> 
       <maxRotVelocity>822.05</maxRotVelocity> 
       <motorConstant>2.62e-05</motorConstant> 
       <momentConstant>0.018</momentConstant> 
@@ -860,7 +860,7 @@
       <linkName>rotor_2</linkName> 
       <turningDirection>cw</turningDirection> 
       <timeConstantUp>0.0125</timeConstantUp> 
-      <timeConstantDown>0.025</timeConstantDown>  
+      <timeConstantDown>0.025</timeConstantDown> 
       <maxRotVelocity>822.05</maxRotVelocity> 
       <motorConstant>2.62e-05</motorConstant> 
       <momentConstant>0.018</momentConstant> 
@@ -876,7 +876,7 @@
       <linkName>rotor_3</linkName> 
       <turningDirection>cw</turningDirection> 
       <timeConstantUp>0.0125</timeConstantUp> 
-      <timeConstantDown>0.025</timeConstantDown>  
+      <timeConstantDown>0.025</timeConstantDown> 
       <maxRotVelocity>822.05</maxRotVelocity> 
       <motorConstant>2.62e-05</motorConstant> 
       <momentConstant>0.018</momentConstant> 
@@ -892,7 +892,7 @@
       <linkName>rotor_4</linkName> 
       <turningDirection>ccw</turningDirection> 
       <timeConstantUp>0.0125</timeConstantUp> 
-      <timeConstantDown>0.025</timeConstantDown>  
+      <timeConstantDown>0.025</timeConstantDown> 
       <maxRotVelocity>822.05</maxRotVelocity> 
       <motorConstant>2.62e-05</motorConstant> 
       <momentConstant>0.018</momentConstant> 
@@ -908,7 +908,7 @@
       <linkName>rotor_5</linkName> 
       <turningDirection>cw</turningDirection> 
       <timeConstantUp>0.0125</timeConstantUp> 
-      <timeConstantDown>0.025</timeConstantDown>  
+      <timeConstantDown>0.025</timeConstantDown> 
       <maxRotVelocity>822.05</maxRotVelocity> 
       <motorConstant>2.62e-05</motorConstant> 
       <momentConstant>0.018</momentConstant> 

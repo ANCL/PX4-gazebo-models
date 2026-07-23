@@ -128,7 +128,7 @@
         <material><ambient>0.5 0.5 0.5 1.0</ambient><diffuse>0.5 0.5 0.5 1.0</diffuse></material> 
       </visual>
 
-      <visual name="body_top_visual"> <pose>0 0 0.025 0 0 0</pose>  
+      <visual name="body_top_visual"> <pose>0 0 0.025 0 0 1.570796326795</pose>  
         <geometry> 
           <mesh><uri>model://fy690s/meshes/body_top.dae</uri></mesh> 
         </geometry> 
@@ -142,14 +142,12 @@
 
       
       <sensor name="air_pressure_sensor" type="air_pressure">
-      <gz_frame_id>base_link</gz_frame_id>
       <always_on>1</always_on>
       <update_rate>50</update_rate>
       <air_pressure><pressure><noise type="gaussian"><mean>0</mean><stddev>3</stddev></noise></pressure></air_pressure>
       </sensor>
 
       <sensor name="magnetometer_sensor" type="magnetometer">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>100</update_rate>
         <magnetometer>
@@ -160,7 +158,6 @@
       </sensor>
 
       <sensor name="imu_sensor" type="imu">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>250</update_rate>
         <imu>
@@ -179,7 +176,6 @@
       </sensor>
 
       <sensor name="navsat_sensor" type="navsat">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>30</update_rate>
       </sensor>
@@ -214,7 +210,7 @@
     </link>
 
     <link name="motor_gimbal_link_0">
-      <pose relative_to="arm_0_endpoint">-0.015 0 0.03 0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_0_endpoint">-0.015 0 0.03 0.314159265359 -0.0 0</pose>
       <inertial>
         <mass>0.005</mass> 
         <inertia>
@@ -229,7 +225,7 @@
     </link>
 
     <link name="motor_0">
-        <pose relative_to="arm_0_endpoint">-0.015 0 0.03 0.43633231299861114 0.0 0</pose>      
+        <pose relative_to="arm_0_endpoint">-0.015 0 0.03 0.314159265359 -0.0 0</pose>      
         <inertial>
         <mass>0.11800000000000001</mass>
         
@@ -254,7 +250,7 @@
     </link>
 
     <link name="rotor_0">
-      <pose relative_to="arm_0_endpoint">-0.015 0 0.03 0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_0_endpoint">-0.015 0 0.03 0.314159265359 -0.0 0</pose>
       <inertial>
         <mass>0.0129</mass>
         
@@ -334,7 +330,7 @@
     </link>
 
     <link name="motor_gimbal_link_1">
-      <pose relative_to="arm_1_endpoint">-0.015 0 0.03 -0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_1_endpoint">-0.015 0 0.03 -0.3700098014228222 -0.0 0</pose>
       <inertial>
         <mass>0.005</mass> 
         <inertia>
@@ -349,7 +345,7 @@
     </link>
 
     <link name="motor_1">
-        <pose relative_to="arm_1_endpoint">-0.015 0 0.03 -0.43633231299861114 0.0 0</pose>      
+        <pose relative_to="arm_1_endpoint">-0.015 0 0.03 -0.3700098014228222 -0.0 0</pose>      
         <inertial>
         <mass>0.11800000000000001</mass>
         
@@ -374,7 +370,7 @@
     </link>
 
     <link name="rotor_1">
-      <pose relative_to="arm_1_endpoint">-0.015 0 0.03 -0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_1_endpoint">-0.015 0 0.03 -0.3700098014228222 -0.0 0</pose>
       <inertial>
         <mass>0.0129</mass>
         
@@ -454,7 +450,7 @@
     </link>
 
     <link name="motor_gimbal_link_2">
-      <pose relative_to="arm_2_endpoint">-0.015 0 0.03 0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_2_endpoint">-0.015 0 0.03 0.3420845333909111 -0.0 0</pose>
       <inertial>
         <mass>0.005</mass> 
         <inertia>
@@ -469,7 +465,7 @@
     </link>
 
     <link name="motor_2">
-        <pose relative_to="arm_2_endpoint">-0.015 0 0.03 0.43633231299861114 0.0 0</pose>      
+        <pose relative_to="arm_2_endpoint">-0.015 0 0.03 0.3420845333909111 -0.0 0</pose>      
         <inertial>
         <mass>0.11800000000000001</mass>
         
@@ -494,7 +490,7 @@
     </link>
 
     <link name="rotor_2">
-      <pose relative_to="arm_2_endpoint">-0.015 0 0.03 0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_2_endpoint">-0.015 0 0.03 0.3420845333909111 -0.0 0</pose>
       <inertial>
         <mass>0.0129</mass>
         
@@ -574,7 +570,7 @@
     </link>
 
     <link name="motor_gimbal_link_3">
-      <pose relative_to="arm_3_endpoint">-0.015 0 0.03 -0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_3_endpoint">-0.015 0 0.03 -0.35604716740686665 -0.0 0</pose>
       <inertial>
         <mass>0.005</mass> 
         <inertia>
@@ -589,7 +585,7 @@
     </link>
 
     <link name="motor_3">
-        <pose relative_to="arm_3_endpoint">-0.015 0 0.03 -0.43633231299861114 0.0 0</pose>      
+        <pose relative_to="arm_3_endpoint">-0.015 0 0.03 -0.35604716740686665 -0.0 0</pose>      
         <inertial>
         <mass>0.11800000000000001</mass>
         
@@ -614,7 +610,7 @@
     </link>
 
     <link name="rotor_3">
-      <pose relative_to="arm_3_endpoint">-0.015 0 0.03 -0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_3_endpoint">-0.015 0 0.03 -0.35604716740686665 -0.0 0</pose>
       <inertial>
         <mass>0.0129</mass>
         
@@ -694,7 +690,7 @@
     </link>
 
     <link name="motor_gimbal_link_4">
-      <pose relative_to="arm_4_endpoint">-0.015 0 0.03 0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_4_endpoint">-0.015 0 0.03 0.32288591161897223 -0.0 0</pose>
       <inertial>
         <mass>0.005</mass> 
         <inertia>
@@ -709,7 +705,7 @@
     </link>
 
     <link name="motor_4">
-        <pose relative_to="arm_4_endpoint">-0.015 0 0.03 0.43633231299861114 0.0 0</pose>      
+        <pose relative_to="arm_4_endpoint">-0.015 0 0.03 0.32288591161897223 -0.0 0</pose>      
         <inertial>
         <mass>0.11800000000000001</mass>
         
@@ -734,7 +730,7 @@
     </link>
 
     <link name="rotor_4">
-      <pose relative_to="arm_4_endpoint">-0.015 0 0.03 0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_4_endpoint">-0.015 0 0.03 0.32288591161897223 -0.0 0</pose>
       <inertial>
         <mass>0.0129</mass>
         
@@ -814,7 +810,7 @@
     </link>
 
     <link name="motor_gimbal_link_5">
-      <pose relative_to="arm_5_endpoint">-0.015 0 0.03 -0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_5_endpoint">-0.015 0 0.03 -0.3839724354387778 -0.0 0</pose>
       <inertial>
         <mass>0.005</mass> 
         <inertia>
@@ -829,7 +825,7 @@
     </link>
 
     <link name="motor_5">
-        <pose relative_to="arm_5_endpoint">-0.015 0 0.03 -0.43633231299861114 0.0 0</pose>      
+        <pose relative_to="arm_5_endpoint">-0.015 0 0.03 -0.3839724354387778 -0.0 0</pose>      
         <inertial>
         <mass>0.11800000000000001</mass>
         
@@ -854,7 +850,7 @@
     </link>
 
     <link name="rotor_5">
-      <pose relative_to="arm_5_endpoint">-0.015 0 0.03 -0.43633231299861114 0.0 0</pose>
+      <pose relative_to="arm_5_endpoint">-0.015 0 0.03 -0.3839724354387778 -0.0 0</pose>
       <inertial>
         <mass>0.0129</mass>
         

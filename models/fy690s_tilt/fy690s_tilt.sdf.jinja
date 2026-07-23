@@ -52,8 +52,8 @@
   {% set sin_vals = [0.5, 1.0, 0.5, -0.5, -1.0, -0.5] %}
   
   {# --- CANTED ROTOR TEST ANGLES (Degrees) --- #}
-  {% set alphas = [25.0, -25.0, 25.0, -25.0, 25.0, -25.0] %}
-  {% set betas = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] %}
+  {% set alphas = alphas | default([25.0, -25.0, 25.0, -25.0, 25.0, -25.0]) %}
+  {% set betas = betas | default([0.0, 0.0, 0.0, 0.0, 0.0, 0.0]) %}
 
   {# --- INERTIA EQUATION MACROS --- #}
   {# Solid Cylinder: Ixx = Iyy = 1/12 * m * (3r^2 + h^2) | Izz = 1/2 * m * r^2 #}
@@ -121,7 +121,7 @@
         <material><ambient>0.5 0.5 0.5 1.0</ambient><diffuse>0.5 0.5 0.5 1.0</diffuse></material> 
       </visual>
 
-      <visual name="body_top_visual"> <pose>0 0 0.025 0 0 0</pose>  
+      <visual name="body_top_visual"> <pose>0 0 0.025 0 0 {{ pi/2 }}</pose>  
         <geometry> 
           <mesh><uri>model://fy690s/meshes/body_top.dae</uri></mesh> 
         </geometry> 
@@ -135,14 +135,12 @@
 
       {# --- SENSORS FOUND WITHIN THE BASE --- #}
       <sensor name="air_pressure_sensor" type="air_pressure">
-      <gz_frame_id>base_link</gz_frame_id>
       <always_on>1</always_on>
       <update_rate>50</update_rate>
       <air_pressure><pressure><noise type="gaussian"><mean>0</mean><stddev>3</stddev></noise></pressure></air_pressure>
       </sensor>
 
       <sensor name="magnetometer_sensor" type="magnetometer">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>100</update_rate>
         <magnetometer>
@@ -153,7 +151,6 @@
       </sensor>
 
       <sensor name="imu_sensor" type="imu">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>250</update_rate>
         <imu>
@@ -172,7 +169,6 @@
       </sensor>
 
       <sensor name="navsat_sensor" type="navsat">
-        <gz_frame_id>base_link</gz_frame_id>
         <always_on>1</always_on>
         <update_rate>30</update_rate>
       </sensor>
