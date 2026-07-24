@@ -194,7 +194,7 @@
     </link>
 
     <link name="motor_gimbal_link_{{ n }}">
-      <pose relative_to="arm_{{ n }}_endpoint">-0.015 0 0.03 {{ alpha_rad }} {{ beta_rad }} 0</pose>
+      <pose relative_to="arm_{{ n }}_endpoint">{{ 0.045 * math.sin(beta_rad) }} {{ -0.045 * math.sin(alpha_rad) * math.cos(beta_rad) }} {{ 0.045 * math.cos(alpha_rad) * math.cos(beta_rad) }} {{ alpha_rad }} {{ beta_rad }} 0</pose>
       <inertial>
         <mass>0.005</mass> 
         <inertia>
@@ -209,7 +209,7 @@
     </link>
 
     <link name="motor_{{ n }}">
-        <pose relative_to="arm_{{ n }}_endpoint">-0.015 0 0.03 {{ alpha_rad }} {{ beta_rad }} 0</pose>      
+        <pose relative_to="arm_{{ n }}_endpoint">{{ 0.045 * math.sin(beta_rad) }} {{ -0.045 * math.sin(alpha_rad) * math.cos(beta_rad) }} {{ 0.045 * math.cos(alpha_rad) * math.cos(beta_rad) }} {{ alpha_rad }} {{ beta_rad }} 0</pose>      
         <inertial>
         <mass>{{ mass_motor + mass_motor_mount }}</mass>
         {{ cylinder_inertia(mass_motor + mass_motor_mount, motor_radius, motor_height) }}
@@ -225,7 +225,7 @@
     </link>
 
     <link name="rotor_{{ n }}">
-      <pose relative_to="arm_{{ n }}_endpoint">-0.015 0 0.03 {{ alpha_rad }} {{ beta_rad }} 0</pose>
+      <pose relative_to="arm_{{ n }}_endpoint">{{ 0.045 * math.sin(beta_rad) }} {{ -0.045 * math.sin(alpha_rad) * math.cos(beta_rad) }} {{ 0.045 * math.cos(alpha_rad) * math.cos(beta_rad) }} {{ alpha_rad }} {{ beta_rad }} 0</pose>
       <inertial>
         <mass>{{ mass_rotor }}</mass>
         {{ box_inertia(mass_rotor, rotor_length, rotor_width, rotor_thickness) }}
